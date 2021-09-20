@@ -7,11 +7,39 @@
 
     </data>
 
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_background"
         tools:context=".FragmentProfile">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="105dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:background="@drawable/rounded_white_shape"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/what_is_decky"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_size_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/logout_button"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:background="@drawable/circular_white_shape"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/profile_picture_card"
@@ -27,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/profile_image"
                     android:layout_width="wrap_content"
@@ -36,6 +65,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_profile_image" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -325,5 +355,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/menu" />
 
+        <ImageView
+            android:id="@+id/profile_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_profile_crown_bg"
+            android:src="@drawable/ic_profile_crown"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_picture_card"
+            app:layout_constraintStart_toEndOf="@id/profile_picture_card"
+            app:layout_constraintTop_toTopOf="@+id/profile_picture_card" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
